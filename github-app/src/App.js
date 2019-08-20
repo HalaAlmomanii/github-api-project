@@ -7,6 +7,7 @@ class App extends Component{
 
 
    change=(e)=>{
+     this.setState({no:""})
   axios.get(`https://api.github.com/users/${e}/repos?page=1&per_page=5`)
   .then((response)=> {
     this.setState({res:response.data});
